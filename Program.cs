@@ -177,7 +177,7 @@ namespace Prog_Recipe_App_Part2
 
             }
 
-            Console.Write("Enter The Number Of Steps: ");
+            Console.Write("Enter The Number Of Steps: "); 
             int numberOfSteps = int.Parse(Console.ReadLine());
 
             List<string> steps = new List<string>();

@@ -25,3 +25,13 @@ When the user enters a number of recipes, and wants to display the list of recip
 
 THIS IS HOW THE APP WORKS
 
+ How to Run the Recipe App?
+1.	Clone the Repository: Clone or download the repository to your local machine.
+2.	Open Solution in Visual Studio: Open the solution file (.sln) in Visual Studio.
+3.	Build the Solution: Build the solution to ensure all dependencies are resolved.
+4.	Run the Application: Start the application by running the program. The main menu will be displayed with options to interact with the Recipe App.
+5.	Choose an Option: Choose one of the available options from the menu and follow the prompts to perform the desired operation.
+6.	Interact with the Application: Continue interacting with the application until you choose to exit.
+7.	Exit the Application: Choose the "Exit" option from the menu to terminate the application.
+
+

@@ -213,7 +213,7 @@ namespace Prog_Recipe_App_Part2
                 Console.WriteLine(recipe.Name);
                
 
-            }
+            } 
         }
 
         static void DisplaySelectedRecipe(List<Recipe> recipes, CalorieNotificationHandler calorieNotification)

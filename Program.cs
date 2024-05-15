@@ -1,12 +1,27 @@
 ﻿
-
 namespace Prog_Recipe_App_Part2
 {
     using System;
     using System.Collections.Generic;
-    using static Prog_Recipe_App_Part2.Ingredient;
 
-    internal class Recipe
+    public class Ingredient
+    {
+        public string Name { get; set; }
+        public double Quantity { get; set; }
+        public string Unit { get; set; }
+        public int Calories { get; set; }
+        public string FoodGroup { get; set; }
+
+        public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
+        {
+            Name = name;
+            Quantity = quantity;
+            Unit = unit;
+            Calories = calories;
+            FoodGroup = foodGroup;
+        }
+
+        public class Recipe
     {
         public string Name { get; set; }
         public List<Ingredient> Ingredients { get; set; }
@@ -21,7 +36,7 @@ namespace Prog_Recipe_App_Part2
             CalculateTotalCalories();
         }
 
-        private void CalculateTotalCalories()
+        public void CalculateTotalCalories()
         {
             TotalCalories = 0;
             foreach (Ingredient ingredient in Ingredients)
@@ -97,29 +112,11 @@ namespace Prog_Recipe_App_Part2
         }
     }
 
-    class Ingredient
-    {
-        public string Name { get; set; }
-        public double Quantity { get; set; }
-        public string Unit { get; set; }
-        public int Calories { get; set; }
-        public string FoodGroup { get; set; }
-
-        public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
-        {
-            Name = name;
-            Quantity = quantity;
-            Unit = unit;
-            Calories = calories;
-            FoodGroup = foodGroup;
-        }
-
-
         static Recipe EnterNewRecipeDetails()
         {
+            Console.WriteLine("-------------ADD NEW RECIPE------------");
             Console.Write("Enter the Recipe Name: ");
             string recipeName = Console.ReadLine();
-            Console.WriteLine();
 
             if (string.IsNullOrEmpty(recipeName))
             {
@@ -186,14 +183,14 @@ namespace Prog_Recipe_App_Part2
                 Console.Write("Enter Step Description " + " " + (i + 1) + ":");
                 string stepDescription = Console.ReadLine();
                 steps.Add(stepDescription);
-                Console.WriteLine();
+               
 
             }
 
             Recipe recipe = new Recipe(recipeName, ingredients, steps);
             return recipe;
              
-            Console.WriteLine();
+         
         }
 
         static void DisplayRecipeList(List<Recipe> recipes)
@@ -214,7 +211,7 @@ namespace Prog_Recipe_App_Part2
             foreach (Recipe recipe in recipes)
             {
                 Console.WriteLine(recipe.Name);
-                Console.WriteLine();
+               
 
             }
         }
@@ -385,6 +382,7 @@ namespace Prog_Recipe_App_Part2
                         }
                         else if (choice == 8)
                         {
+                            Console.WriteLine("Thank You For Using Peace's Recipe App. Good Byee!! See You Next Time.");
                             return;
                         }
                         else

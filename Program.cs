@@ -14,7 +14,7 @@ namespace Prog_Recipe_App_Part2
           
         public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
         {
-            Name = name;
+            Name = name; 
             Quantity = quantity;
             Unit = unit;
             Calories = calories;

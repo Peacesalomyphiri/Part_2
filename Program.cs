@@ -13,7 +13,7 @@ namespace Prog_Recipe_App_Part2
         public string FoodGroup { get; set; }
           
         public Ingredient(string name, double quantity, string unit, int calories, string foodGroup)
-        {
+        { 
             Name = name; 
             Quantity = quantity;
             Unit = unit;

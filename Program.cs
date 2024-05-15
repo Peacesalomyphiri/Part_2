@@ -5,7 +5,7 @@ namespace Prog_Recipe_App_Part2
     using System.Collections.Generic;
 
     public class Ingredient
-    { 
+    {  
         public string Name { get; set; }
         public double Quantity { get; set; }
         public string Unit { get; set; }
